@@ -1,0 +1,89 @@
+/* style.css */
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3498db;
+  color: white;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color .7s ease, color .5s ease;
+  user-select: none;
+}
+
+.container {
+  width: min(90%, 900px);
+  text-align: center;
+  padding: 2rem;
+}
+
+#quote {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  word-break: break-word;
+}
+
+.instruction {
+  margin-top: 2rem;
+  font-size: 1rem;
+  opacity: .8;
+  font-weight: 300;
+  letter-spacing: 1px;
+  transition: opacity .3s ease;
+}
+
+@media(max-width:600px) {
+  #quote {
+    font-size: 2rem;
+  }
+  .instruction {
+    font-size: .9rem;
+  }
+}
+
+.fade-out {
+  opacity: 0;
+  transform: scale(0.92);
+}
+
+.logout-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  background: rgba(255, 255, 255, .15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, .5);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: .9rem;
+  transition: .2s;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, .3);
+}

@@ -1,0 +1,75 @@
+<!-- dashboard.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./css/dashboard.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>QuoteFlow Admin</h1>
+      <button id="logoutBtn" type="button" aria-label="Logout">Logout</button>
+    </header>
+
+    <main>
+      <section class="top-bar">
+        <h2>Slides Management</h2>
+        <button id="addSlideBtn" type="button" aria-label="Add a new slide">
+          + Add Slide
+        </button>
+      </section>
+
+      <div id="emptyState" class="empty-state hidden">
+        <div class="empty-icon">📄</div>
+        <h2>No Slides Yet</h2>
+        <p>Click <strong>Add Slide</strong> to create your first quote.</p>
+      </div>
+
+      <div id="slidesContainer"></div>
+
+      <div id="modalOverlay" class="modal-overlay hidden" aria-hidden="true">
+        <div class="modal"  role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+          <h2 id="modalTitle">Add New Slide</h2>
+
+          <form id="slideForm">
+            <label>Quote</label>
+            <textarea id="quoteText" rows="4" required></textarea>
+
+            <label>Background Color</label>
+            <input type="color" id="backgroundColor" value="#3498db" />
+
+            <label>Text Color</label>
+            <input type="color" id="textColor" value="#ffffff" />
+
+            <label>Order</label>
+            <input type="number" id="order" min="1" required />
+
+            <div class="modal-actions">
+              <button type="button" id="cancelBtn">Cancel</button>
+              <button type="submit" id="saveBtn">Save Slide</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <div id="deleteModal" class="modal-overlay hidden">
+      <div class="modal delete-modal" role="dialog" aria-modal="true" aria-labelledby="deleteTitle">
+        <h2 id="deleteTitle">Delete Slide</h2>
+        <p class="delete-message">
+          Are you sure you want to delete this slide?
+        </p>
+        <blockquote id="deleteQuote"></blockquote>
+        <div class="modal-actions">
+          <button type="button" id="cancelDeleteBtn">Cancel</button>
+          <button type="button" id="confirmDeleteBtn">Confirm</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./js/dashboard.js"></script>
+  </body>
+</html>
