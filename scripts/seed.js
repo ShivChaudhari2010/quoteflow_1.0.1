@@ -8,8 +8,8 @@ import mongoose from "mongoose";
 dotenv.config();
 
 const accounts = [
-  { username: "admin", password: "admin", role: "admin" },
-  { username: "user", password: "user", role: "user" }
+  { username: "admin", password: "admin123", role: "admin" },
+  { username: "user", password: "user123", role: "user" }
 ];
 
 async function seed() {
