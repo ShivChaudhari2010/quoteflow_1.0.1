@@ -325,3 +325,24 @@ label {
     padding: 22px;
   }
 }
+
+
+.site-footer {
+  margin-top: 50px;
+  padding: 25px 15px;
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.site-footer strong {
+  color: #3498db;
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    font-size: 0.8rem;
+    padding: 20px 10px;
+  }
+}

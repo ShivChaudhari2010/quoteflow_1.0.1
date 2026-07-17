@@ -87,3 +87,29 @@ body {
 .logout-btn:hover {
   background: rgba(255, 255, 255, .3);
 }
+
+.site-footer {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  user-select: none;
+  pointer-events: none;
+}
+
+.site-footer strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    font-size: 0.75rem;
+    bottom: 10px;
+    width: 90%;
+  }
+}

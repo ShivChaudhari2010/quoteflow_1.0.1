@@ -14,6 +14,7 @@ body {
   justify-content: center;
   align-items: center;
   background: #f4f6f9;
+  position: relative;
 }
 
 .login-container {
@@ -82,4 +83,27 @@ button:focus-visible {
 
 .hidden {
   display: none;
+}
+
+
+.site-footer {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.site-footer strong {
+  color: #3498db;
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    font-size: 0.75rem;
+    width: 90%;
+  }
 }
